@@ -8,7 +8,7 @@ using UnityEngine;
 public class CoordinateLabeler : MonoBehaviour
 {
     [SerializeField]
-    Color defaultColor = Color.white;
+    Color defaultColor = Color.blue;
 
     [SerializeField]
     Color blockedColor = Color.gray;
@@ -17,7 +17,7 @@ public class CoordinateLabeler : MonoBehaviour
     Color exploredColor = Color.yellow;
 
     [SerializeField]
-    Color pathColor = new Color(1f, 0.5f, 0f);
+    Color pathColor = Color.red;
 
     TextMeshPro label;
 

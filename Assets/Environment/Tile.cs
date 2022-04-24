@@ -51,10 +51,13 @@ public class Tile : MonoBehaviour
             !pathfinder.WillBlockPath(coordinates)
         )
         {
-            bool isPlaced =
+            bool isSuccuessful =
                 towerPrefab.CreateTower(towerPrefab, transform.position);
-            isPlaceable = !isPlaced;
-            gridManager.BlockNode (coordinates);
+            if (isSuccuessful)
+            {
+                gridManager.BlockNode (coordinates);
+                pathfinder.NotifyReceivers();
+            }
         }
     }
 }
